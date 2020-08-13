@@ -8,7 +8,6 @@ import Banner from "./containers/Banner";
 import "bootswatch/dist/slate/bootstrap.min.css";
 import "./index.css";
 
-
 const App = () => {
   return (
     <Fragment>

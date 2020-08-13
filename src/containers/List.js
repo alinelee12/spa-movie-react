@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Card from "../components/Card/Card";
 
 
+
 const API = process.env.API;
 
 
@@ -20,6 +21,7 @@ class List extends React.Component {
 
     const res = await fetch(`${API}&s=x-men`);
     const resJSON = await res.json();
+
     if (resJSON) {
       this.setState({
         data: resJSON.Search,
@@ -37,7 +39,7 @@ class List extends React.Component {
 
     const response = await fetch(`${API}&s=${this.state.searchTerm}`);
     const data = await response.json();
-    
+ 
     if (!data.Search) {
       return this.setState({ error: "Sem nenhum resultado..." });
     }
@@ -47,9 +49,12 @@ class List extends React.Component {
       searchTerm: "",
       error: "",
     });
+    
   }
+  
 
   render() {
+    
     const { data, loading } = this.state;
     if (loading) {
       return <div>Carregando...</div>;
