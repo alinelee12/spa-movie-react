@@ -1,10 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+
+
+
 const Card = ({ movie }) => {
   return (
-    <div className="col-md-3 col-sm- 12 text-left">
-      <div className="flex-card card">
+    
+    <div className="col-md-4 col-sm-12 text-left">
+   
+      <div className="card">
         <img src={movie.Poster} alt={movie.Title} className="card-img-top"/>
       <div className="card-body">
         <h6 className="card-title">{`${movie.Title} (${movie.Year})`}</h6>
@@ -25,6 +30,5 @@ Card.propTypes = {
     Type: PropTypes.string,
   }).isRequired,
 };
-
 
 export default Card;

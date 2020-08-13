@@ -28,7 +28,7 @@ class Banner extends React.Component {
   render() {
 
     const { data } = this.state;
-    console.log (data)
+ 
     return (
       <Fragment>
         <h1 className="destaque">DESTAQUE SEMANA</h1>
@@ -38,6 +38,9 @@ class Banner extends React.Component {
           <h2>{data.Title}</h2>
           <p>{data.Ploter}</p>
           <p>Diretor: {data.Director}</p>
+          <p>Atores: {data.Actors}</p>
+          <p>{data.Plot}</p>
+          <p>Prêmios: {data.Awards}</p>
           <p>Genero: {data.Genre}</p>
           <p>Ano: {data.Year}</p>
           <div className="row">

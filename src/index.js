@@ -8,12 +8,12 @@ import Banner from "./containers/Banner";
 import "bootswatch/dist/slate/bootstrap.min.css";
 import "./index.css";
 
+
 const App = () => {
   return (
     <Fragment>
       <header>
       <a href="#" id="logo"><img className="logo" src="/assets/images/Jmovie.png" /></a>
-      <div className="login"><a href="#">LOGIN</a></div>
       </header>
        <section id="hero1" className="hero">
       <div className="inner">
@@ -30,6 +30,11 @@ const App = () => {
           <List />
         </div>
       </main>
+      <footer>
+        <div className="col-md-4 col-sm-12 offset-md-5 offset-sm-6 p-4">
+          <p>Desenvolvido por Aline Pereira</p>
+        </div>
+      </footer>
     </Fragment>
   );
 };

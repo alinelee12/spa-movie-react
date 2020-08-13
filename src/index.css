@@ -29,23 +29,7 @@
     text-align:center;
 
   }
-  header .login{
-    color:white;
-    padding:0px 30px; 
-    height:60px;
-    line-height:60px; 
-    text-align:center;
-    text-decoration:none;
-    text-transform:uppercase; 
-    letter-spacing:2px; 
-    font-weight:700;
-    float: right;
-  }
-  header .login :hover{
-    color:#33cccc;
-    text-decoration:none;
-  }
-  .logo{
+ .logo{
     height: 60%;
   }
    .hero, .content{
@@ -68,7 +52,7 @@
       
   .copy{
     position:absolute; 
-    top:30%; 
+    top:22%; 
     height:10em; 
     margin-top:-5em; 
     width:100%;
@@ -80,17 +64,17 @@
     font-size: 70px;
     color:#fff;
     font-family: 'Limelight', cursive;
-    margin-bottom:5vw;
+    margin-left:-2vw;
   }
   .hero h2{
     color:#fff;
     font-family: 'Montserrat', sans-serif;
-    margin-left:1vw;
-    font-size: 50px;
+    font-size: 40px;
   }
   .hero p{ 
     color:#fff;
     font-family: 'Montserrat', sans-serif;
+  
   }
   .content h1, .content p{
     color:#333;
@@ -107,7 +91,7 @@
   }
   .posterbanner{
     width:200px;
-    margin-top:-5vw;
+    margin-top:-2vw;
     border: 5px solid white;
     -webkit-box-shadow: -14px -4px 8px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -14px -4px 8px 0px rgba(0,0,0,0.75);
@@ -119,20 +103,13 @@
   align-self:center;
   }
  
-  .flex-card{
-    flex: 1;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis:400px;
-  display: flex;
-  flex-wrap: wrap;
-  }
   .card{
     margin-bottom:2vw;
     min-height: 37vw;
   }
+
   .card-img-top{
-   height: 25vw;
+   height: 35vw;
   }
   .card-title{
     min-height: 5vw;
@@ -141,7 +118,29 @@
   @media only screen and (min-width: 992px) {
     .posterbanner{
       width:320px;
-      margin-top:-15vw;
+      margin-top:-8vw;
     }
 
   }
+.IMDB{
+  background-color:red;
+  border-radius:50px;
+  font-weight: bold;
+  text-align:center;
+  padding:5px;
+}
+.Metascore{
+  background-color:blue;
+  border-radius:50px;
+  font-weight: bold;
+  text-align:center;
+  padding:5px;
+}
+.Bilheteria{
+  background-color:green;
+  border-radius:50px;
+  font-weight: bold;
+  text-align:center;
+  padding:5px;
+  width:100px;
+}

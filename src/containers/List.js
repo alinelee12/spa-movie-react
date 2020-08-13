@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import Card from "../components/Card/Card";
-import Modal from "../components/Modal";
 
 
 const API = process.env.API;
