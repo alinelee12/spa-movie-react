@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
 import Card from "../components/Card/Card";
+import Modal from "../components/Modal";
+
 
 const API = process.env.API;
-console.log(process.env.API);
+
 
 class List extends React.Component {
   constructor() {
@@ -17,9 +19,8 @@ class List extends React.Component {
 
   async componentDidMount() {
 
-    const res = await fetch(`${API}&s=batman`);
+    const res = await fetch(`${API}&s=x-men`);
     const resJSON = await res.json();
-    console.log(resJSON);
     if (resJSON) {
       this.setState({
         data: resJSON.Search,
@@ -32,14 +33,14 @@ class List extends React.Component {
   async handleSubmit(e) {
     e.preventDefault();
     if (!this.state.searchTerm) {
-      return this.setState({ error: "Please write a valid text" });
+      return this.setState({ error: "Por favor, escreva um texto válido" });
     }
 
     const response = await fetch(`${API}&s=${this.state.searchTerm}`);
     const data = await response.json();
-    console.log(data);
+    
     if (!data.Search) {
-      return this.setState({ error: "There are no results." });
+      return this.setState({ error: "Sem nenhum resultado..." });
     }
 
     return this.setState({
@@ -52,18 +53,21 @@ class List extends React.Component {
   render() {
     const { data, loading } = this.state;
     if (loading) {
-      return <div>Loading...</div>;
+      return <div>Carregando...</div>;
     }
 
     return (
       <Fragment>
+       
         <div className="row">
-          <div className="col-md-4 offset-md-4 p-4">
+  
+          <div className="col-md-6 col-sm-12 offset-md-3 offset-sm-6 p-4">
+
             <form onSubmit={(e) => this.handleSubmit(e)}>
               <input
                 type="text"
                 className="form-control"
-                placeholder="Search"
+                placeholder="Buscar..."
                 onChange={(e) => this.setState({ searchTerm: e.target.value })}
                 value={this.state.searchTerm}
                 autoFocus
@@ -75,9 +79,11 @@ class List extends React.Component {
           </div>
         </div>
         <div className="row pt-2">
+          <div className="flex-container">
           {data.map((movie, i) => (
             <Card movie={movie} key={i} />
           ))}
+          </div>
         </div>
       </Fragment>
     );
