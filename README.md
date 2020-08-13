@@ -5,5 +5,5 @@
  * Busca de filme pelo título.
  * Detalhes do filme.
  
- ![alt text](https://github.com/alinelee12/spa-movie-react/blob/master/src/Jmovie.png)
+ ![alt text](https://github.com/alinelee12/spa-movie-react/blob/master/src/TelaJmovie01.png)
 
